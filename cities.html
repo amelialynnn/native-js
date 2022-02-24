@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cities">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>DrinkUp</title>
+  </head>
+
+  <body>
+    <section class="nav-container">
+      <nav class="nav">
+        <p class="logo"><a href="index.html">DrinkUp</a></p>
+
+        <button class="hamburger" id="hamburger">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <ul class="nav-ul" id="nav-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="drinks.html">Drinks</a></li>
+          <li><a href="cities.html">Cities</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="icons">
+          <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+          <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+        </div>
+      </nav>
+    </section>
+
+    <section id="cities">
+      <h1 >Cities</h1>
+
+      <table id="cities-list">
+        <tr id="cities-table"></tr>
+      </table>
+
+      <section id="add">
+        <p class="section-description">Insert name and population of the city you wish to add</p>
+        <label for="input-city">City:</label>
+        <input id="input-city" type="text" placeholder="City...">
+
+        <label for="input-population">Population:</label>
+        <input id="input-population" type="text" placeholder="Population...">
+
+        <input id="add-btn" class="cities-btn" type="button" value="Add">
+      </section>
+
+      <section id="remove">
+        <p class="section-description">Insert ID of the city you wish remove</p>
+        <label for="remove-city">City ID:</label>
+        <input id="remove-city" type="text" placeholder="ID of city...">
+        <input id="remove-btn" class="cities-btn"
+        type="button" value="Remove">
+      </section>
+
+      <section id="edit">
+        <p class="section-description">Insert ID of the city you wish to edit along with new city and/or population</p>
+        <label for="edit-id">City ID:</label>
+        <input id="edit-id" type="text" placeholder="ID of city...">
+        <label for="new-city">New city:</label>
+        <input id="new-city" type="text" placeholder="New city name...">
+        <label for="new-population">New population:</label>
+        <input id="new-population" type="text" placeholder="New population...">
+        <input id="edit-btn" class="cities-btn" type="button" value="Edit">
+      </section>
+    </section>
+
+    <footer id="footer">
+      <hr>
+      <div class="icons">
+        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+      </div>
+      <p>DrinkUp | © 2021, All rights reserved</p>
+    </footer>
+
+    <script src="cities.js"></script>
+
+  </body>
+</html>

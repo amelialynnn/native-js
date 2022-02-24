@@ -1,0 +1,559 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff5ee;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin: 2rem 0 2.5rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 2rem 0 2.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h3,
+a > span {
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 0.5rem 0 2rem;
+  font-size: 1.3rem;
+}
+
+body {
+  background-color: #202020;
+}
+
+/*********** DESKTOP ************/
+
+/* NAVBAR */
+
+.nav-container {
+  background-image: url("images/landing_large.jpg");
+  background-color: grey;
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.logo {
+  padding-left: 1.5rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgb(71, 68, 68);
+}
+
+.nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgb(71, 68, 68);
+}
+
+a {
+  text-decoration: none;
+}
+
+li > a:hover,
+.icons > a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  color: rgba(255, 245, 238, 0.849);
+}
+
+.nav-ul li a {
+  display: inline-block;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  padding-right: 1.5rem;
+  text-shadow: 2px 2px 5px rgb(71, 68, 68);
+}
+
+.icons a {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.logo,
+.nav-ul li a {
+  padding: 10px 15px;
+}
+
+a .fa {
+  padding-left: 1rem;
+  text-decoration: none;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+  display: none;
+  background-color: transparent;
+  padding-right: 1.5rem;
+  border: 0;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* SEARCH */
+
+#site-search {
+  margin: 30px 0;
+}
+
+#search-field {
+  display: flex;
+  justify-content: center;
+}
+
+#filter {
+  background-color: transparent;
+  border-color: seashell;
+  color: seashell;
+  border-radius: 2px;
+  border-width: 1.8px;
+  padding: 3px 6px;
+  margin-right: 6px;
+  text-transform: none;
+}
+
+::placeholder {
+  color: seashell;
+}
+
+#search-btn {
+  border: 0;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#filtered-drinks img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* SEARCH RESULT */
+
+#result-search {
+  display: none;
+}
+
+#filtered-drinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+#filtered-drinks h3 {
+  text-align: center;
+}
+
+/* DRINKS SECTION */
+
+#section-random {
+  display: block;
+}
+
+#section-popular h2,
+#section-random h2,
+#section-favorite {
+  text-align: center;
+}
+
+#popular-drinks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+a span {
+  display: flex;
+  justify-content: center;
+}
+
+#random-drinks,
+#favorite-drinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pop-drink,
+.random-drink,
+.drink-type,
+.favorite-drink {
+  text-align: center;
+}
+
+.pop-drink img,
+.random-drink img,
+.drink-type img,
+#str-img,
+.favorite-drink img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* DRINKS LIST */
+
+#section-type h2 {
+  text-align: center;
+}
+
+#section-type {
+  display: none;
+}
+
+#type-drinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#type-drinks > .drink-type {
+  flex: 1 1 30%;
+}
+
+/* COCKTAIL IMAGE */
+
+#cocktail-img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 50vh;
+  margin-top: 0.5rem;
+}
+
+/* RECIPE */
+
+#section-recipe {
+  display: none;
+}
+
+#section-recipe h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#section-recipe h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#recipe-container {
+  display: grid;
+  grid-template-columns: 300px 30vw;
+  grid-template-rows: 1fr 0.8fr;
+  grid-template-areas:
+    "img recipe"
+    "img instructions";
+  margin: 1.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#str-img {
+  grid-area: img;
+  justify-self: end;
+  width: 50vw;
+  max-width: 350px;
+}
+
+#recipe {
+  grid-area: recipe;
+  text-align: end;
+  justify-self: center;
+  align-self: center;
+  padding: 0 1rem 1rem;
+  width: 250px;
+}
+
+#instructions {
+  grid-area: instructions;
+  justify-self: center;
+  align-self: start;
+  padding: 0 1rem 1rem;
+  width: 230px;
+}
+
+/* FOOTER */
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+hr {
+  margin-top: 1.5rem;
+  width: 80vh;
+}
+
+#footer .icons {
+  display: block;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+#footer p {
+  font-size: 0.8rem;
+}
+
+/***************** CONTACT - contact.html ***************/
+
+#contact-section {
+  display: flex;
+  justify-content: center;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 2rem;
+}
+
+#contact-form > h1 {
+  margin: 0 0 1rem;
+}
+
+#contact-form > h2 {
+  font-size: 1.6rem;
+  margin: 1rem 0 0;
+}
+
+label {
+  margin: 1.2rem 0 0.5rem;
+  font-weight: 500;
+}
+
+#contact-form > p {
+  margin-bottom: 0.5rem;
+}
+
+.style-input {
+  background-color: transparent;
+  border-color: seashell;
+  color: seashell;
+  border-radius: 2px;
+  border-width: 1.8px;
+  padding: 3px 6px;
+  margin-right: 6px;
+  text-transform: none;
+}
+
+#textarea {
+  resize: none;
+  height: 110px;
+}
+
+#concent {
+  margin: 1.2rem 0;
+}
+
+#submit-btn {
+  border: 1;
+  border-radius: 3px;
+  width: 100px;
+  padding: 5px;
+  background-color: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: rgb(15, 14, 14);
+}
+
+/***************** CITIES - cities.html ***************/
+
+#cities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cities-list {
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+  margin: 0 0 1rem;
+  width: 50vw;
+}
+
+tbody {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 5px 20px;
+  padding: 8px;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+tr:nth-child(even) > td {
+  background-color: #dddddd;
+  color: #202020;
+}
+
+#add,
+#remove,
+#edit {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 50vw;
+}
+
+#cities h1 {
+  margin: 1rem 2rem;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#add input,
+#remove input,
+#edit input {
+  background-color: transparent;
+  border-color: seashell;
+  color: seashell;
+  border-radius: 2px;
+  border-width: 1.8px;
+  padding: 3px 6px;
+  margin-right: 6px;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.cities-btn {
+  border: 1;
+  border-radius: 3px;
+  width: 100px;
+  padding: 5px;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+#add-btn:hover,
+#remove-btn:hover,
+#edit-btn:hover {
+  background-color: rgb(15, 14, 14);
+}
+
+/*********** MOBILE ************/
+
+@media screen and (max-width: 800px) {
+  /* NAVBAR */
+
+  .nav-container {
+    background-image: url("images/landing_small.jpg");
+  }
+
+  .nav-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* DRINKS SECTION */
+
+  #popular-drinks,
+  #type-drinks {
+    flex-direction: column;
+  }
+
+  /* RECIPE */
+  #recipe-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  #str-img {
+    width: 50vw;
+    max-width: 300px;
+  }
+
+  #recipe {
+    width: 50vw;
+    max-width: 300px;
+    padding: 0;
+    margin: 2rem 1rem 1rem;
+    align-self: center;
+  }
+
+  #instructions {
+    width: 50vw;
+    max-width: 300px;
+    padding-left: 0;
+    margin: 1rem 0 0;
+    align-self: center;
+  }
+
+  /* FOOTER */
+
+  #footer hr {
+    width: 50vh;
+  }
+}
